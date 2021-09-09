@@ -159,6 +159,4 @@ a. 预测式扩展
 
 #### 2.1.4 其他拓展得对比
 
-![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
-
-![AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比](../../images/AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比.png)
+![AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比](../../images/AWSAutoScalling)
