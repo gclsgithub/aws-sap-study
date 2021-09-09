@@ -159,4 +159,4 @@ a. 预测式扩展
 
 #### 2.1.4 其他拓展得对比
 
-![AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比](../images/AWSAutoScalling.png)
+![AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比](../images/AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比.png)
