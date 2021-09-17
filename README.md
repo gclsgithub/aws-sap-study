@@ -160,3 +160,84 @@ a. 预测式扩展
 #### 2.1.4 其他拓展得对比
 
 ![AWSAutoScalling,Amazon EC2 Auto Scaling Auto Scaling对比](./images/AWSAutoScalling_AmazonEC2AutoScaling_AutoScaling对比.png)
+
+
+## 3.AWS组织 [Organizations]
+
+### 3.1 服务控制策略(SCP)
+
+### 3.2 整合账单
+
+### 3.3集中式日志存储架构
+
+#### 目标
+
+注意事项
+   a. 今早定义日志保留的要求以及日志生命周期策略	
+   
+   b. 日志生命周期策略的自动化
+
+   c. 自动安装和配置日志传输代理程序 [①AMI ②USERDATA]
+
+   d. 支持混合云架构 []
+
+解决方案
+	1. AWS Elastic Search Service
+	2. AWS CloudWatch logs
+	3. kinesis Firehose
+	4. AWS S3
+
+
+
+## 4. AWS月成本计算器地址
+
+https://calculator.s3.amazonaws.com/index.html?lng=#
+
+
+## 5. 存储桶策略
+
+### 5.1 访问策略
+
+#### 1.跨账户存储桶访问
+
+#### 2.aws s3 ls s3://xxxxxx --profile accontb
+
+##  IAM 策略评估
+
+![策略决策图](./images/策觉评估.png)
+
+![做出决策](./images/makeDecition.png)
+
+显示拒绝和默认拒绝
+
+## 6.AWS STS 服务生成临时凭证
+
+  
+![AWSSTS](./images/STS步骤.png)
+
+## 7. KMS使用
+
+### 7.1定义
+
+### 7.2特点
+	1.完全托管
+	2.集中式密钥管理
+	3.管理AWS服务的加密
+	4.成本低廉
+
+### 7.3 使用
+
+![KMS](./images/KMS.png)
+
+## 8.网络ACL(控制子网流量)
+
+特点:
+	1.网络ACL是没有任何状态的
+	2.网络ACL是执行在子网级别，安全组是执行在实例级别的
+	3.VPC中的每个子网都必须与一个网络ACL相关联
+	3.默认网络ACL的内容为允许所有出站和入站的流量
+	4.自定义网络ACL默认拒绝所有的出站和入站
+
+![基本架构ACL](./images/基本架构ACL.png)
+
+	
