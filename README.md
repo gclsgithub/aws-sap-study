@@ -240,31 +240,34 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 
 ![基本架构ACL](./images/基本架构ACL.png)
 
+> 安全组和ACL的比较
+
+
+|  安全组  |  网络ACL  |
+| ---- | ---- |
+|  实例级别  |  子网级别  |
+|  仅仅支持允许规则  |  支持允许规则和拒绝规则  |
+|  有状态:数据返回的流量会被自动允许，且不受任何规则影响  |  无状态:返回数据的流量必须被规则明确允许  |
+|  只有在启动实例的同时指定安全组，或者稍后将安全组与实例关联的情况下，操作才会被应用到实例  |  自动应用于关联的子网中的所有实例（安全组规则过于松散，他提供额外的防御层） |
+
+## 9.RDS只读副本
+
+![RDS只读副本](./images/RDS只读副本.png)
+
+选择AWSRDS只读副本的时候，应选择只读副本的配置和元数据库有同等的规模，而不应该低于元数据库的配置。
+
+
+## 10.标准ACL
+
+| 标准ACL |  适用于 |  添加到ACL的权限  | 备考 |
+| ---- | ---- | ---- |---- |
+| private | 存储桶和对象 | 所有者获取Full Control。其他人没有访问权限 | default |
+| public-read | 存储桶和对象 | 所有者将获得FUll Control。AllUsers组将获得Read访问权 | |
+| public-read-write | 存储桶和对象 | 所有者将获得FUll Control。AllUsers组将获得Read何 Write访问权 | |
+| aws-exec-read | 存储桶和对象 | 所有者将获得FUll Control。Amazone Ec2从AmazoneS3获取相对Get Amazon系统镜像(AMI)捆绑的Read访问权限 | |
+| authenticated-read | 存储桶和对象 | 所有者将获得FUll Control。AuthenticatedUsers组将获得Read访问权限 | |
+| bucket-owner-read | Object | 所有者将获得FUll Control。存储桶所有者将获得READ访问权限 | |
+| bucket-owner-full-controll | Object | 所有者何存储桶将获得FUll Control。| often use |
+| log-delivery-write |  存储桶 | LogDelivery组将获得针对存储桶的write和READ_ACP许可| |
 	
-    # aws-sap-study
-
-## 9.AWS账户管理
-
-### 9.1账户体系结构
-
-> 1.1 日志账户体系结构　
-
-> ⇒　将所有账户的所需日志全部接种在一个中心区域之中，在这个中心区域集中对日志进行监控和分析。
-
-![日志账户体系结构]( ./images/日志账户体系结构.png "日志账户体系")
-
-> 1.2 发布账户体系
-
-> ⇒　集中管理整个企业预先皮装的AMI以及AWS CloudFormation模板的客户
-
-![发布账户体系]( ./images/发布账户体系.png "发布账户体系")
-
-> 1.3 账单账户体系
-
-> ⇒　集中管理用户账单
-
-![账单账户体系]( ./images/账单账户体系.png "账单账户体系")
-
-### 2.
-
 
