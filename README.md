@@ -202,7 +202,7 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 
 #### 2.aws s3 ls s3://xxxxxx --profile accontb
 
-##  IAM 策略评估
+##  6.IAM 策略评估
 
 ![策略决策图](./images/策觉评估.png)
 
@@ -225,9 +225,20 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 	3.管理AWS服务的加密
 	4.成本低廉
 
+
 ### 7.3 使用
 
+> KMS
 ![KMS](./images/KMS.png)
+
+
+>EC2访问S3的方式
+
+![EC2访问S3的方式](./images/AWS-Security-Token.png)
+
+>STS附加到角色
+
+![STS附加到角色](./images/STS生成Key.png)
 
 ## 8.网络ACL(控制子网流量)
 
@@ -271,3 +282,23 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 | log-delivery-write |  存储桶 | LogDelivery组将获得针对存储桶的write和READ_ACP许可| |
 	
 
+## 11.最小权限原则
+
+> 定义:最小权限是指的是每个程序和系统用户都应该具有完成任务所必须的最小权限的集合。
+> 一个用户应该只能访问履行他职责所需访问的数据和硬件。
+
+## 12.AWS临时安全凭证
+
+● AWS STS 创建可控制对您的AWS资源的访问的临时安全凭证，并将这些凭证提供给收信任的用户。
+
+● 临时凭证是**短期的**凭证,可将这些凭证的有效时间配置几分钟到几小时，再一定时间后失效。
+
+● 不必随应用程序分配或嵌入长期AWS安全凭证
+
+● 可允许用户访问您的AWS资源，而不必要为这些用户定义AWS身份，临时凭证是基于角色和联合身份验证的基础
+
+● 临时安全凭证的使用期限有限，因此，再不需要这些临时凭证时不必要轮换或撤销，因为临时凭证到期之后无法重复使用。
+
+
+获取临时安全凭证
+curl http://IP/latest/meta-data/iam/security-credentials/S3ReadOnly/
