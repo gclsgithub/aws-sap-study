@@ -309,3 +309,7 @@ curl http://IP/latest/meta-data/iam/security-credentials/S3ReadOnly/
 
 ![临时凭证生成](./images/临时凭证生成.png)
 
+```
+生成临时凭证
+(base)  ✘ gucanlin@gucanlindeMacBook-Pro  ~  aws sts assume-role --role-arn arn:aws:iam::189388601959:role/stroll --role-session-name stroll --profile toward_500
+```
