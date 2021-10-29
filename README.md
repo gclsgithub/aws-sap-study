@@ -229,6 +229,13 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 ### 7.3 使用
 
 > KMS
+
+KMS图标
+![KMS图标](./images/KMS图标.png)
+
+> KSM操作
+
+
 ![KMS](./images/KMS.png)
 
 
@@ -243,7 +250,7 @@ https://calculator.s3.amazonaws.com/index.html?lng=#
 ## 8.网络ACL(控制子网流量)
 
 特点:
-	1.网络ACL是没有任何状态的
+	1.网络ACL是**没有**任何状态的
 	2.网络ACL是执行在子网级别，安全组是执行在实例级别的
 	3.VPC中的每个子网都必须与一个网络ACL相关联
 	3.默认网络ACL的内容为允许所有出站和入站的流量
@@ -313,3 +320,17 @@ curl http://IP/latest/meta-data/iam/security-credentials/S3ReadOnly/
 生成临时凭证
 (base)  ✘ gucanlin@gucanlindeMacBook-Pro  ~  aws sts assume-role --role-arn arn:aws:iam::189388601959:role/stroll --role-session-name stroll --profile toward_500
 ```
+
+## 13. 信封加密
+
+信奉加密是类似于数字信封技术的一种加密手段。
+这种技术将加密数据的数据密钥封入信封中，存储，传递，和使用，**不再使用主密钥直接加密解密数据**。
+
+优点：
+
+	① AWS KMS支持发送最大4KB的数据进行直接加密
+
+	② 信封加密降低了网络负载，可以提供巨大的性能优势 
+
+	③ 将需要加密的数据通过网络传输至KMS，传输数据过程中的安全风险问题
+
