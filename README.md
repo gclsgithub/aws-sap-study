@@ -350,9 +350,25 @@ curl http://IP/latest/meta-data/iam/security-credentials/S3ReadOnly/
 ## 15.置放群组
 
 ### 1.种类
-	a. 集群置放群组
-	b. 分区置放群组
+	a. 集群置放群组  
+	b. 分布置放群组 
 	c. 分区置放群组
 
 > 集群置放群组
 ![集群置放群组](./images/集群置放群组.png)
+
+
+## 16.Spot实例
+
+> Spot实例 -- 无状态的应用，应用程序可以中断。
+![Spot实例](./images/Spot实例.png)
+
+> Spot队列
+![Spot队列](./images/Spot队列.png)
+
+## 17. 弹性伸缩 （ Auto Scaling）
+
+> 垂直拓展和水平拓展
+
+![水平拓展和垂直拓展](./images/水平拓展和垂直拓展.png)
+
