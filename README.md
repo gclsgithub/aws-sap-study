@@ -372,3 +372,11 @@ curl http://IP/latest/meta-data/iam/security-credentials/S3ReadOnly/
 
 ![水平拓展和垂直拓展](./images/水平拓展和垂直拓展.png)
 
+## 18.负载均衡器
+
+
+## 19.route53
+
+
+## 20.lambda
+
